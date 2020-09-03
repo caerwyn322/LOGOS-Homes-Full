@@ -6,7 +6,7 @@ from .form import ContactForm
 
 class ContactView(TemplateView):
 
-    template_name = ''
+    template_name = 'layout.html'
 
     def get(self, request):
         form = ContactForm

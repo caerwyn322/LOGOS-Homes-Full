@@ -37,6 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'import_export',
+    'django.session-idle-timeout',
+    'about_us',
+    'contact_us',
+    'designs',
+    'gallery',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -75,8 +82,9 @@ WSGI_APPLICATION = 'logos_homes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
         'NAME': BASE_DIR / 'db.sqlite3',
+
     }
 }
 
@@ -118,3 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+

@@ -1,0 +1,47 @@
+.about-us-info,.members-info{
+	width: 90vw;
+	padding: 1rem;
+	display: flex;
+	justify-content: justify;
+}
+.about-us-info{
+	margin: 5rem auto;
+	flex-direction: row;
+	height: 100vh;
+}
+.about-us-details{
+	height: 100%;
+	width: 50%;
+	padding-right: 1rem;
+}
+.about-us-details p{
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 1.5rem;
+}
+.about-us-img{
+	height: 100%;
+	width: 40%;
+	margin-left: 4rem;
+}
+
+.members-info{
+	flex-direction: column;
+	margin: 0 auto;
+	height: 150vh;
+}
+.member-card{
+	display: flex;
+	flex-direction: row;
+	height: 40%;
+	margin-bottom:2rem;
+}
+.member-img{
+	width: 100%;
+}
+.member-img img{
+	height: 100%;
+}
+p{
+	font-size: 1.5rem;
+}
