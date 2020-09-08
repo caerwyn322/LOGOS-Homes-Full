@@ -1,10 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'contact_us/site-template.html'%}
 
-</body>
-</html>
+{% block content %}
+<div class="main-content uk-container">
+    <h1 class="uk-text-extra-large uk-text-bold" uk-text>Contact Us</h1>
+    <div class="content">
+        <div class="contact-message">
+            <div class="message uk-card uk-card-default">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl lacus, feugiat in dui sed, porttitor luctus lacus. Proin feugiat porta dui, non maximus odio. Integer volutpat ex congue eros efficitur sagittis. Sed id velit gravida, aliquet magna vitae, ultrices nisi.
+                <br><br>
+                Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
+
+                </p>
+            </div>
+            <div class="contact-details uk-card uk-card-default">
+                <h1 class="uk-text-large uk-text-bold">Contact Details</h1>
+                <p><span uk-icon="receiver"></span> 021 0286 4980</p>
+                <p><span uk-icon="mail"></span> frankcapote@logosdevelopment.co.nz</p>
+            </div>
+        </div>
+        <div class="contact-form">
+            <div class="form uk-card uk-card-default">
+                <form class="form" action="">
+                    <fieldset class="uk-fieldset">
+                        <div class="uk-margin">
+                            <label>Full Name</label>
+                            <input class="uk-input uk-margin" type="text" placeholder="Full Name" required="required">
+                            <label>Email</label>
+                            <input class="uk-input uk-margin" type="email" placeholder="Email" required="required">
+                            <label>Phone Number</label>
+                            <input class="uk-input uk-margin" type="text" placeholder="Phone Number" required="required">
+                            <label>Message</label>
+                            <textarea class="uk-textarea uk-margin" rows="8" placeholder="Textarea"></textarea>
+                            <input class="sub-btn uk-button uk-button-default" type="submit" value="Submit"></input>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

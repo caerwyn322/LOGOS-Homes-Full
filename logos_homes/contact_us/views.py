@@ -6,7 +6,7 @@ from .form import ContactForm
 
 class ContactView(TemplateView):
 
-    template_name = 'layout.html'
+    template_name = 'contact_us/Contact Us.html'
 
     def get(self, request):
         form = ContactForm
@@ -14,5 +14,5 @@ class ContactView(TemplateView):
             'forms' : form
         }
 
-        return render(request, self.template_name, context)
+        return render(request, self.template_name, context,)
 

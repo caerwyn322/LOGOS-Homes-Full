@@ -10,6 +10,9 @@ class Contacts(models.Model):
     message = models.TextField(default='')
     sent_on = models.DateTimeField(default=datetime.now(), blank=True)
 
+    def __str__(self):
+        return self.name
+
     class Meta():
         verbose_name_plural = "Messages"
 
