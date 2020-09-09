@@ -1,0 +1,37 @@
+{% extends 'contact_us/site-template.html'%}
+{% load static%}
+{% block content %}
+
+	<div class="designs">
+    <h1 class="uk-text-extra-large uk-text-bold" uk-text>Plans and Designs</h1>
+        {% for design in designs%}
+        <!--design 1-->
+        <div class="design-details uk-card uk-card-default">
+            <div class="design-img uk-card-media-left">
+                <img data-src="{{design.design_image.url}}" alt="{{design.design_name}}" uk-img>
+            </div>
+            <div class="uk-card-body">
+                <h1 class="design-info-heading uk-card-title uk-text-large" uk-text>{{design.design_name}}</h1>
+                <p class="design-info">{{design.design_desc}}</p>
+                <p class="design-specs">${{design.design_price}}/sqrm</p>
+                <button class="spec-btn uk-button-default uk-button-large uk-text-large" href="">Specifications</button>
+
+            </div>
+        </div>
+        {% endfor %}
+        <!--Design 2
+        <div class="design-details uk-card uk-card-default">
+            <div class="design-img uk-card-media-left">
+                <img data-src="images/meadows.jpg" alt="Design 1" uk-img>
+            </div>
+            <div class="uk-card-body">
+                <h1 class="design-info-heading uk-card-title uk-text-large" uk-text>Design 1</h1>
+                <p class="design-info">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl lacus, feugiat in dui sed, porttitor luctus lacus. Proin feugiat porta dui, non maximus odio. Integer volutpat ex congue eros efficitur sagittis. Sed id velit gravida, aliquet magna vitae, ultrices nisi.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl lacus, feugiat in dui sed, porttitor luctus lacus. Proin feugiat porta dui, non maximus odio. Integer volutpat ex congue eros efficitur sagittis. Sed id velit gravida, aliquet magna vitae, ultrices nisi.</p>
+                <p class="design-specs">$165/sqr</p>
+                <button class="spec-btn uk-button-default uk-button-large uk-text-large" href="">Specifications</button>
+
+            </div>
+        </div>-->
+    </div>
+
+{% endblock %}
