@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'contact_us',
     'designs',
     'gallery',
-    'home'
+    'home',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -131,7 +132,7 @@ STATICFILES_DIRS = [
     '/var/www/static/',
 ]
 STATIC_URL = '/static/'
-
+STATIC_ROOT = 'LOGOS-Homes-Full/logos_homes/static'
 
 MEDIA_URL = '/media/'
 

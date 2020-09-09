@@ -1,0 +1,76 @@
+body{
+	width: 100%;
+}
+
+.current-project{
+	
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 90vw;
+	margin: 0 auto;
+	margin-bottom: 10rem;
+	margin-top: 5rem;
+}
+.current-project h1{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.proj-details{
+	width: 100%;
+	height: 65%;
+	display: flex;
+	flex-direction: row;
+}
+.cur-project-img{
+	width: 100%;
+	height: 100%;
+}
+.cur-project-img img{
+	width: 100%;
+	height: 100%;
+}
+.project-info-heading{
+	font-size: 2rem;
+	font-weight: 800;
+	font-family: 'Poppins', sans-serif;
+}
+.project-info{
+	font-family: 'Poppins', sans-serif;
+}
+.spec-btn{
+	border-radius: 0.5rem;
+}
+.spec-btn:hover{
+	background:black;
+	color:#fec63d;
+}
+
+.img-slider{
+	height: 35%;
+	width: 100%;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+
+/**Previews Projects Style**/
+.prev-projects{
+	height: 80vh;
+	width:90vw;
+	background:black;
+	margin:0 auto;
+	padding: 1rem;
+}
+.gallery{
+	width: 100%;
+	height: 100%;
+	
+}
+.prev-projects h1{
+	color: #fec63d;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.panel-title{
+	font-family: 'Poppins', sans-serif;
+	color: white;
+}

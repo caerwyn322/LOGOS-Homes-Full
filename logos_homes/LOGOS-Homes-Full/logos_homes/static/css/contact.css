@@ -1,0 +1,61 @@
+
+
+.main-content{
+	width: 90vw;
+	margin: 0 auto;
+	margin-top: 5rem;
+}
+.main-content h1{
+	font-family: 'Noto Sans JP', sans-serif;
+}
+.main-content .content{
+	display: flex;
+	justify-content: justify;
+}
+.contact-message{
+	width: 50rem;
+	height: 50rem;
+	margin-right: 2rem;
+}
+.message, .contact-details{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-size: 1.2rem;
+	font-weight: 500;
+	text-align: justify;
+  text-justify: inter-word;
+	padding: 1rem 2rem;
+	margin-bottom: 1rem;
+}
+.message{
+	height: 25rem;
+}
+.contact-details{
+	height: 10rem;
+}
+.contact-form{
+	width: 50rem;
+	height: 60rem;
+	margin-left: 2rem;
+}
+.form{
+  background-color: #444444; 
+	padding: 0 1rem;
+	padding-top: 1rem;
+	color: white;
+}
+.form fieldset div label, .form fieldset div input, .form fieldset div textarea{
+	font-size: 1.4rem;
+}
+.form fieldset div label{
+	padding-bottom: 2rem;
+}
+.sub-btn{
+	font-size: 1.4rem;
+	margin-top: 2rem;
+	color: white;
+	text-transform: capitalize;
+}
+.sub-btn:hover{
+	color:#fec63d;
+}
+

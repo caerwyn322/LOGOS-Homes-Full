@@ -20,18 +20,23 @@
         </div>
         <div class="contact-form">
             <div class="form uk-card uk-card-default">
-                <form class="form" action="">
+                <form class="form" action="Contact-Us.html" method="POST">
                     <fieldset class="uk-fieldset">
                         <div class="uk-margin">
-                            <label>Full Name</label>
+                            {% csrf_token %}
+                            {{forms.name}}
+                            {{forms.email}}
+                            {{forms.contact_number}}
+                            {{forms.message}}
+                            <!--<label>Full Name</label>
                             <input class="uk-input uk-margin" type="text" placeholder="Full Name" required="required">
                             <label>Email</label>
                             <input class="uk-input uk-margin" type="email" placeholder="Email" required="required">
                             <label>Phone Number</label>
                             <input class="uk-input uk-margin" type="text" placeholder="Phone Number" required="required">
                             <label>Message</label>
-                            <textarea class="uk-textarea uk-margin" rows="8" placeholder="Textarea"></textarea>
-                            <input class="sub-btn uk-button uk-button-default" type="submit" value="Submit"></input>
+                            <textarea class="uk-textarea uk-margin" rows="8" placeholder="Textarea"></textarea>-->
+                            <input class="sub-btn uk-button uk-button-default" type="submit" value="Submit">
                         </div>
                     </fieldset>
                 </form>
