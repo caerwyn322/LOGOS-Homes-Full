@@ -23,13 +23,18 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('contact_us/', include('contact_us.urls')),
+    path('Contact-Us.html', include('contact_us.urls')),
     path('designs/', include('designs.urls')),
     path('designs/Designs.html', include('designs.urls')),
-    path(r'contact_us/Contact-Us.html', include('contact_us.urls'))
-]
-if settings.DEBUG:
-    urlpatterns += [
-        url(r'^media/(?P<oath>.*)$', serve,{
-            'document_root':settings.MEDIA_ROOT,
-        })
-    ]
+    path('Designs.html', include('designs.urls')),
+    path(r'contact_us/Contact-Us.html', include('contact_us.urls')),
+    path('abouts_us/', include('about_us.urls')),
+    path('about_us/About-Us.html', include ('about_us.urls')),
+    path('About-Us.html', include('about_us.urls'))
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += [
+#         url(r'^media/(?P<oath>.*)$', serve,{
+#             'document_root':settings.MEDIA_ROOT,
+#         })
+#     ]

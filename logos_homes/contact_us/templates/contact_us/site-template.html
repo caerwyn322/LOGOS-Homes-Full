@@ -9,7 +9,12 @@
 
     <!--CSS-->
     <link rel="stylesheet" href="{% static 'css/uikit.min.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/uikit.css'%}"/>
     <link rel="stylesheet" href="{% static 'css/contact.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/about.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/designs.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/home.css'%}"/>
+    <link rel="stylesheet" href="{% static 'css/gallery.css'%}"/>
     <link rel="stylesheet" href="{% static 'css/shared.css'%}"/>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
     <script src="{% static 'js/uikit.min.js'%}"></script>
@@ -20,7 +25,7 @@
     <nav class="nav uk-margin" uk-navbar>
         <div class="uk-navbar-left uk-margin-small-left">
             <div class="logo uk-navbar-item uk-logo">
-                <a href="Home.html">
+                <a href="/home/Home.html">
                     <img data-src="{% static 'images/logo.png'%}" alt="LOGOS Homes Logo" class="logo-image" width="100" height="100" uk-img>
                     <h1 class="uk-text-bold" uk-text>LOGOS Homes</h1>
                 </a>
@@ -28,10 +33,10 @@
         </div>
         <div class="uk-navbar-right uk-margin-small-right">
             <ul class="nav-items uk-navbar-nav ">
-                <li><a href="Designs.html">Plans and Designs</a></li>
-                <li><a href="Gallery.html">Gallery</a></li>
-                <li class="active"><a href="About Us.html">About Us</a></li>
-                <li><a href="Contact Us.html">Contact Us</a></li>
+                <li><a href="/designs/Designs.html">Plans and Designs</a></li>
+                <li><a href="/gallery/Gallery.html">Gallery</a></li>
+                <li class="active"><a href="/about_us/About-Us.html">About Us</a></li>
+                <li><a href="/contact_us/Contact-Us.html">Contact Us</a></li>
             </ul>
         </div>
     </nav>

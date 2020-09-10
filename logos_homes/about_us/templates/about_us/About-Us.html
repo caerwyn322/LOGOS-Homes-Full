@@ -1,0 +1,42 @@
+{% extends 'contact_us/site-template.html'%}
+{% load static %}
+
+{% block content %}
+	<!--Video-->
+	<div class="cover-vid uk-cover-container uk-height-large">
+		 <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay loop muted playsinline uk-cover></video>
+	</div>
+    <div class="about-us-info">
+		<div class="about-us-details">
+			<h1 class="uk-text-extra-large uk-text-bold" uk-text>LOGOS Homes</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nisl lacus, feugiat in dui sed, porttitor luctus lacus. Proin feugiat porta dui, non maximus odio. Integer volutpat ex congue eros efficitur sagittis. Sed id velit gravida, aliquet magna vitae, ultrices nisi.
+			<br><br>
+			Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
+			<br><br>
+			Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
+			<br><br>
+			Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
+
+			</p>
+		</div>
+		<img class="about-us-img" data-src="{% static 'images/pepes.jpg'%}" alt="US" uk-img>
+	</div>
+
+	<!--Members Info-->
+	<div class="members-info">
+		<h1 class="uk-text-extra-large uk-text-bold uk-text-center" uk-text>The Team</h1>
+		{% for member in members%}
+		<div class="member-card uk-margin-top uk-card uk-card-default">
+			<div class="member-img uk-card-media-left">
+				<img data-src="{{member.member_image.url}}" alt="{{member.member_name}}" uk-img>
+			</div>
+			<div class="uk-card-body">
+				<h1 class="member-name uk-card-title uk-text-large uk-text-bold uk-text">{{member.member_name}}</h1>
+				<p class="member-info">
+					{{member.member_bio}}
+				</p>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+{% endblock %}
