@@ -30,7 +30,10 @@ urlpatterns = [
     path(r'contact_us/Contact-Us.html', include('contact_us.urls')),
     path('abouts_us/', include('about_us.urls')),
     path('about_us/About-Us.html', include ('about_us.urls')),
-    path('About-Us.html', include('about_us.urls'))
+    path('About-Us.html', include('about_us.urls')),
+    path('gallery/', include('gallery.urls')),
+    path('gallery/Gallery.html', include('gallery.urls')),
+    path('Gallery.html', include('gallery.urls'))
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # if settings.DEBUG:
 #     urlpatterns += [
