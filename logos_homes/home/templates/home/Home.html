@@ -1,0 +1,113 @@
+{% extends 'contact_us/site-template.html'%}
+{% load static %}
+
+{% block content %}
+        {% for details in details%}
+		<!--slider-->
+		<div class="home-slider uk-slider uk-position-relative uk-visible-toggle uk-light" uk-slider="autoplay: true">
+			<ul class="uk-slider-items uk-child-width-1-1 uk-grid" uk-height-match="target: > li > img">
+				<li>
+						<img data-src="{{ details.slider_image_1.url }}" alt="" uk-img>
+						<div class="text-over uk-position-center uk-panel">
+							<h1>Negotiable Price</h1>
+						</div>
+				</li>
+				<li>
+						<img data-src="{{ details.slider_image_2.url }}"" alt="" uk-img>
+						<div class="text-over uk-position-center uk-panel">
+							<h1>Reliable Work Ethic</h1>
+						</div>
+				</li>
+				<li>
+						<img data-src="{{ details.slider_image_3.url }}"" alt="" uk-img>
+						<div class="text-over uk-position-center uk-panel">
+							<h1>Trustworthy End Product</h1>
+						</div>
+				</li>
+			</ul>
+			<a class="uk-position-center-left uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+					<a class="uk-position-center-right uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+		</div>
+
+		<!--Main Content Info-->
+		<div class="about-us-info">
+			<div class="about-us-details">
+				<h1 class="uk-text-extra-large uk-text-bold" uk-text>LOGOS Homes</h1>
+				<p>{{details.bio}}
+			</div>
+			<img class="about-us-img" data-src="{{details.main_image.url}}" alt="US" uk-img>
+		</div>
+        {% endfor %}
+		<!--Team Members-->
+
+		<div class="home-team-members">
+			<h1 class="uk-text-extra-large uk-text-bold" uk-text>Team Members</h1>
+			<div class="members">
+                {% for member in team%}
+				<div class="team-members uk-card uk-card-default">
+					<div class="uk-card-media-top">
+						<img data-src="{{member.member_image.url}}" alt="{{member.member_name}}" uk-img>
+					</div>
+					<div class="uk-card-body">
+						<h3 class="uk-card-title">{{member.member_name}}</h3>
+						<p>{{member.member_bio}}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+
+			<a href="/about_us/About-Us.html"><button class="spec-btn uk-button-default uk-button-large uk-text-large" >More Info</button></a>
+		</div>
+
+
+		<div class="getting-started">
+			<h1 class="uk-text-extra-large uk-text-bold" uk-text>Get Started</h1>
+			<h2 class="uk-text-large" uk-text>Taking the first step to building your dream house</h2>
+			<br><br>
+			<p>Getting that dream house of yours is only a few clicks away from you, follow the steps and let us know how we can help you achieve that goal.</p>
+			<div class="steps-container">
+				<div class="steps">
+					<span uk-icon="icon: mail; ratio: 10"></span>
+					<h3 class="uk-text-large uk-text-bold" uk-text>Contact Us</h3>
+					<p class="uk-text-center">Give us a holla so and set up an appointment with us on your own time</p>
+				</div>
+				<div class="steps">
+					<span uk-icon="icon: location; ratio: 10"></span>
+					<h3 class="uk-text-large uk-text-bold" uk-text>Meet Up</h3>
+					<p class="uk-text-center">Meet up with us on an appointed day so we can understand each other better.</p>
+				</div>
+				<div class="steps">
+					<span uk-icon="icon: list; ratio: 10"></span>
+					<h3 class="uk-text-large uk-text-bold" uk-text>Specifications</h3>
+					<p class="uk-text-center">We can then discuss the specifications you have in mind and move on from there.</p>
+				</div>
+			</div>
+			<a href="/contact_us/Contact-Us.html"> <button type="button" class="contact-btn uk-button-default uk-button-large uk-text-large" >Contact Us</button></a>
+		</div>
+
+
+		<div class="gallery">
+			<div class="gallery-slider uk-slider uk-position-relative uk-visible-toggle uk-light" uk-slider>
+				<ul class="uk-slider-items uk-child-width-1-4@s uk-grid" uk-height-match="target: > li > img">
+					<li>
+							<img data-src="images/proj1.jpg" alt="" uk-img>
+					</li>
+					<li>
+							<img data-src="images/proj1.jpg" alt="" uk-img>
+					</li>
+					<li>
+							<img data-src="images/proj1.jpg" alt="" uk-img>
+					</li>
+					<li>
+							<img data-src="images/proj1.jpg" alt="" uk-img>
+					</li>
+					<li>
+							<img data-src="images/proj1.jpg" alt="" uk-img>
+					</li>
+				</ul>
+				<a class="uk-position-center-left uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+				<a class="uk-position-center-right uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>
+			</div>
+			<a href="/gallery/Gallery.html"><button class="spec-btn uk-button-default uk-button-large uk-text-large" >Gallery</button></a>
+		</div>
+{% endblock %}

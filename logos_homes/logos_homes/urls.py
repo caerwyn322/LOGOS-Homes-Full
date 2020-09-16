@@ -21,6 +21,10 @@ from django.views.static import serve
 from django.urls import path, include
 
 urlpatterns = [
+    path('/', include('home.urls')),
+    path('home/', include('home.urls')),
+    path('home/Home.html', include('home.urls')),
+    path('Home.html', include('home.urls')),
     path('admin/', admin.site.urls),
     path('contact_us/', include('contact_us.urls')),
     path('Contact-Us.html', include('contact_us.urls')),
