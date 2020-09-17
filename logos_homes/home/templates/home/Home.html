@@ -45,7 +45,7 @@
 			<div class="members">
                 {% for member in team%}
 				<div class="team-members uk-card uk-card-default">
-					<div class="uk-card-media-top">
+					<div class="home-member-img uk-card-media-top">
 						<img data-src="{{member.member_image.url}}" alt="{{member.member_name}}" uk-img>
 					</div>
 					<div class="uk-card-body">
@@ -89,21 +89,11 @@
 		<div class="gallery">
 			<div class="gallery-slider uk-slider uk-position-relative uk-visible-toggle uk-light" uk-slider>
 				<ul class="uk-slider-items uk-child-width-1-4@s uk-grid" uk-height-match="target: > li > img">
+					{% for project in projects%}
 					<li>
-							<img data-src="images/proj1.jpg" alt="" uk-img>
+							<img data-src="{{project.project_main_image.url}}" alt="{{project.project_name}}" uk-img>
 					</li>
-					<li>
-							<img data-src="images/proj1.jpg" alt="" uk-img>
-					</li>
-					<li>
-							<img data-src="images/proj1.jpg" alt="" uk-img>
-					</li>
-					<li>
-							<img data-src="images/proj1.jpg" alt="" uk-img>
-					</li>
-					<li>
-							<img data-src="images/proj1.jpg" alt="" uk-img>
-					</li>
+					{% endfor %}
 				</ul>
 				<a class="uk-position-center-left uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
 				<a class="uk-position-center-right uk-position-medium uk-hidden-hover uk-slidenav-large" href="#" uk-slidenav-next uk-slider-item="next"></a>

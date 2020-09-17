@@ -22,3 +22,9 @@ class ProjectImages(models.Model):
     image_name = models.CharField(max_length=50, default='')
     image = models.ImageField(upload_to='images', default='')
     image_project = models.ForeignKey(Projects, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.image_project.project_name + " " + self.image_name
+
+    class Meta():
+        verbose_name_plural = "Project Images"

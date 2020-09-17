@@ -16,7 +16,7 @@ class ProjectImagesInline(admin.StackedInline):
 
 class GalleryAdmin(ImportExportActionModelAdmin):
     list_display = ('project_name', 'project_status')
-    inlines = [ProjectImagesInline,]
+    inlines = [ProjectImagesInline]
 
 
 admin.site.register(ProjectImages, GalleryImagesAdmin)

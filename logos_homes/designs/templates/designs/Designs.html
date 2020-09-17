@@ -14,7 +14,7 @@
                 <h1 class="design-info-heading uk-card-title uk-text-large" uk-text>{{design.design_name}}</h1>
                 <p class="design-info">{{design.design_desc}}</p>
                 <p class="design-specs">${{design.design_price}}/sqrm</p>
-                <button class="spec-btn uk-button-default uk-button-large uk-text-large" href="">Specifications</button>
+                <a href="{{design.design_specs.url}}" target="_new"><button class="spec-btn uk-button-default uk-button-large uk-text-large" >Specifications</button></a>
 
             </div>
         </div>

@@ -42,6 +42,9 @@
 .member-img img{
 	height: 100%;
 }
-p{
+.uk-card-body p{
 	font-size: 1.5rem;
+	white-space: nowrap;
+	overflow:hidden;
+	text-overflow: ellipsis;
 }

@@ -12,9 +12,11 @@ class HomeView(TemplateView):
     def get(self, request):
         details = Home.objects.all()
         team = TeamMembers.objects.all()
+        previous_projects = Projects.objects.filter(project_status=True).all()
         context = {
             'details': details,
-            'team': team
+            'team': team,
+            'projects': previous_projects
         }
 
         return render(request, self.template_name, context)

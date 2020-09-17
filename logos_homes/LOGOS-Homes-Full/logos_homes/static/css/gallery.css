@@ -1,5 +1,6 @@
 body{
 	width: 100%;
+	background: black;
 }
 
 .current-project{
@@ -73,4 +74,7 @@ body{
 .panel-title{
 	font-family: 'Poppins', sans-serif;
 	color: white;
+}
+.prev-image{
+    min-height: 50%;
 }

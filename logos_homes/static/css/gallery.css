@@ -1,5 +1,6 @@
 body{
 	width: 100%;
+
 }
 
 .current-project{
@@ -39,6 +40,10 @@ body{
 }
 .spec-btn{
 	border-radius: 0.5rem;
+	color: black;
+}
+.spec-btn a{
+    color: black;
 }
 .spec-btn:hover{
 	background:black;
@@ -73,4 +78,10 @@ body{
 .panel-title{
 	font-family: 'Poppins', sans-serif;
 	color: white;
+}
+.prev-image-cont{
+    height:70vh;
+}
+.prev-image{
+    min-height: 100%;
 }
