@@ -18,7 +18,7 @@
 	margin-bottom: 2rem;
 }
 .design-img{
-	width: 100%;
+	max-width: 30%;
 	height: 100%;
 }
 .design-img img{
@@ -33,6 +33,9 @@
 .design-info, .design-specs{
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.5rem;
+	overflow:hidden;
+	text-overflow: ellipsis;
+	max-height: 500px;
 }
 .spec-btn{
 	border-radius: 0.5rem;

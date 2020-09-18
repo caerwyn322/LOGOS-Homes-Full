@@ -16,22 +16,22 @@
 			Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
 			<br><br>
 			Nunc placerat orci nisi, a euismod massa facilisis sit amet. Vestibulum nisl ligula, semper ac ex non, aliquam consectetur odio. Cras quis nunc varius, hendrerit elit ac, fringilla dui. Integer bibendum nulla sem, et gravida augue ultrices eget.
-
 			</p>
 		</div>
-		<img class="about-us-img" data-src="{% static 'images/pepes.jpg'%}" alt="US" uk-img>
+		<img class="about-us-img" data-src="{% static 'images/pepes.jpg'%}" loading="lazy" alt="US" uk-img>
 	</div>
 
 	<!--Members Info-->
-	<div class="members-info">
+	<div class="members-info show-on-scroll">
 		<h1 class="uk-text-extra-large uk-text-bold uk-text-center" uk-text>The Team</h1>
 		{% for member in members%}
 		<div class="member-card uk-margin-top uk-card uk-card-default">
 			<div class="member-img uk-card-media-left">
-				<img data-src="{{member.member_image.url}}" alt="{{member.member_name}}" uk-img>
+				<img data-src="{{member.member_image.url}}" alt="{{member.member_name}}" loading="lazy" uk-img>
 			</div>
 			<div class="uk-card-body">
 				<h1 class="member-name uk-card-title uk-text-large uk-text-bold uk-text">{{member.member_name}}</h1>
+				<h2 class="member-position uk-text-bold" uk-text>{{member.member_position}}</h2>
 				<p class="member-info">
 					{{member.member_bio}}
 				</p>
@@ -39,4 +39,29 @@
 		</div>
 		{% endfor %}
 	</div>
+
+<script>
+	window.sr = ScrollReveal();
+    sr.reveal('.cover-vid',{
+        duration: 1500,
+        origin: 'top',
+        distance: '200px',
+        viewFactor: 0,
+        reset: true
+    })
+    sr.reveal('.about-us-info',{
+        duration: 1500,
+        origin: 'bottom',
+        distance: '200px',
+        viewFactor: 0,
+        reset: true
+    })
+    sr.reveal('.member-card',{
+        duration: 1500,
+        origin: 'bottom',
+        distance: '200px',
+        viewFactor: 0,
+        reset: true
+    })
+</script>
 {% endblock %}

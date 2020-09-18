@@ -28,14 +28,6 @@
                             {{forms.email}}
                             {{forms.contact_number}}
                             {{forms.message}}
-                            <!--<label>Full Name</label>
-                            <input class="uk-input uk-margin" type="text" placeholder="Full Name" required="required">
-                            <label>Email</label>
-                            <input class="uk-input uk-margin" type="email" placeholder="Email" required="required">
-                            <label>Phone Number</label>
-                            <input class="uk-input uk-margin" type="text" placeholder="Phone Number" required="required">
-                            <label>Message</label>
-                            <textarea class="uk-textarea uk-margin" rows="8" placeholder="Textarea"></textarea>-->
                             <input class="sub-btn uk-button uk-button-default" type="submit" value="Submit">
                         </div>
                     </fieldset>
@@ -44,4 +36,14 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    window.sr = ScrollReveal();
+    sr.reveal('.main-content',{
+        duration: 1500,
+        origin: 'top',
+        distance: '200px',
+        viewFactor: 0,
+        reset: true
+    })
+</script>
 {% endblock %}

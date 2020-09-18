@@ -102,13 +102,25 @@ span{
 	color: white;
 }
 
-.gallery{
+.home-page-gallery{
+    width: 90%;
 	display: flex;
 	flex-direction: column;
 	justify-content: justify;
 	align-items: center;
+	height: 40vh;
+	margin: 0 auto;
 }
 .gallery-slider{
-	width: 80vw;
+	width: 100%;
+	height: 100%;
 	margin: 0 auto;
+}
+.gallery-slider ul li{
+    max-width: 25%;
+    max-height: 100%;
+}
+.gallery-slider ul li img{
+    width: 100%;
+    height: 100%;
 }

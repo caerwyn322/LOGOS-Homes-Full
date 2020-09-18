@@ -8,13 +8,15 @@ class GalleryView(TemplateView):
     template_name = 'gallery/Gallery.html'
 
     def get(self, request):
+        count = 0
         current_projects = Projects.objects.filter(project_status=False).all()
         previous_projects = Projects.objects.filter(project_status=True).all()
         images = ProjectImages.objects.all()
         context = {
             'current_projects': current_projects,
             'previous_projects': previous_projects,
-            'images': images
+            'images': images,
+            'count': count
         }
 
         return render(request, self.template_name, context)
