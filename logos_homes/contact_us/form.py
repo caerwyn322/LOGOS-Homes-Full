@@ -13,7 +13,7 @@ class ContactForm(forms.Form):
                                                          "placeholder": "Email", "required": "required"}))
     contact_number = forms.CharField(widget=forms.NumberInput(attrs={"class": "uk-input uk-margin", "type": "text",
                                                                      "placeholder": "Phone Number", "required": "required"}))
-    message = forms.CharField(widget=forms.Textarea(attrs={"class": "uk-textare uk-margin", "rows": "8",
+    message = forms.CharField(widget=forms.Textarea(attrs={"class": "uk-textarea uk-margin", "rows": "8",
                                                            "placeholder": "How can we help you?"}))
 
     def clean_name(self):

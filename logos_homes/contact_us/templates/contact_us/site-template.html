@@ -38,15 +38,28 @@
                 </a>
             </div>
         </div>
-        <div class="uk-navbar-right uk-margin-small-right">
-            <ul class="nav-items uk-navbar-nav ">
+        <div class="navbar uk-navbar-right uk-margin-small-right ">
+            <ul class="nav-items uk-navbar-nav uk-visible@s">
+                <li><a href="/designs/Designs.html">Plans and Designs</a></li>
+                <li><a href="/gallery/Gallery.html">Gallery</a></li>
+                <li class="active"><a href="/about_us/About-Us.html">About Us</a></li>
+                <li><a href="/contact_us/Contact-Us.html">Contact Us</a></li>
+            </ul>
+            <a href="#" id="menu-btn" class="menu-toggle uk-navbar-toggle uk-hidden@s uk-text-large" uk-navbar-toggle-icon uk-toggle="target: #sideNav"></a>
+        </div>
+
+    </nav>
+    <div id="sideNav" uk-offcanvas="flip: true" class="uk-offcanvas">
+        <div class="side-bar uk-offcanvas-bar">
+            <a href="#" class="menu-toggle uk-navbar-toggle uk-hidden@s uk-text-large" uk-navbar-toggle-icon uk-toggle="target: #sideNav"></a>
+            <ul class="side-nav uk-nav nav-items">
                 <li><a href="/designs/Designs.html">Plans and Designs</a></li>
                 <li><a href="/gallery/Gallery.html">Gallery</a></li>
                 <li class="active"><a href="/about_us/About-Us.html">About Us</a></li>
                 <li><a href="/contact_us/Contact-Us.html">Contact Us</a></li>
             </ul>
         </div>
-    </nav>
+    </div>
     {% block content%}
 
     {% endblock %}
